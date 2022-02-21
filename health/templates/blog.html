@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container" style="dir:rtl;lang:fa;">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="sidebar_hlt">
+          <h4 class="hs_heading">مجله پزشکی</h4>
+          <div class="hs_blog_single"> <img src="http://placehold.it/1140X475" alt="">
+            <div class="hs_blog_categorie_detail">
+              <div class="hs_blog_categorie_date">
+                <ul>
+                  <li><a href=""><i class="fa fa-calendar"></i> 12-Dec-2018</a></li>
+                  <li><a href=""><i class="fa fa-heart"></i> 258</a></li>
+                  <li><a href=""><i class="fa fa-eye-slash"></i> 198</a></li>
+                  <li><a href=""><i class="fa fa-comments"></i> 127</a></li>
+                  <li><a href=""><i class="fa fa-user"></i> Jack Wilston</a></li>
+                </ul>
+              </div>
+              <hr>
+              {% for b in blog%}
+              <a href="">
+              <h4>{{b.head|safe}}</h4>
+              </a>
+            
+              <p>{{b.describtion|safe}}</p>
+            {% endfor %}
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <h4 class="hs_heading">Comment</h4>
+          <div class="hs_comment_form">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="input-group"> 
+                    <span class="input-group-btn">
+                  <button class="btn btn-success" type="button"><i class="fa fa-user"></i></button>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+                <!-- /input-group --> 
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="input-group"> <span class="input-group-btn">
+                  <button class="btn btn-success" type="button"><i class="fa fa-envelope"></i></button>
+                  </span>
+                  <input type="text" class="form-control" placeholder="Email">
+                </div>
+                <!-- /input-group --> 
+              </div>
+              <!-- /.col-lg-6 -->
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <textarea class="form-control" rows="8"></textarea>
+                </div>
+                <!-- /input-group --> 
+              </div>
+              <div class="form-group">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div class="checkbox">
+                    <label>
+                    <input type="checkbox" id="hs_checkbox" class="css-checkbox lrg" checked="checked">
+                    <label for="hs_checkbox" name="checkbox69_lbl" class="css-label lrg hs_checkbox">Receive Your Comments By Email</label>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12"> <a href="" class="btn btn-success pull-right">Send</a> </div>
+              </div>
+            </div>
+          </div>
+          <div class="hs_margin_30"></div>
+          <div class="hs_comment">
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2"><img src="http://placehold.it/90X90" alt=""></div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <div class="hs_comment_date">
+                  <ul>
+                    <li><a href=""><i class="fa fa-user"></i> Jack Wilston</a></li>
+                    <li><a href=""><i class="fa fa-calendar"></i> 12-Dec-2018</a></li>
+                    <li><a href=""><i class="fa fa-clock-o"></i> 2:32 PM</a></li>
+                  </ul>
+                </div>
+                <p>Curabitur ullamcorper dictum risus sed elementum. Sed pretium in risus non ollicitudin. Morbi euismod consecteturisque. Phasellus quis cursus ant sagittis pellentesque pulvinar. Maecenas pharetra.</p>
+                <a href="" class="btn btn-success pull-right">Reply</a> </div>
+            </div>
+          </div>
+          <div class="hs_sub_comment_div">
+            <div class="hs_sub_comment">
+              <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                  <div class="hs_comment">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-2 col-sm-2"><img src="http://placehold.it/90X90" alt=""></div>
+                      <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="hs_comment_date">
+                          <ul>
+                            <li><a href=""><i class="fa fa-user"></i> Jack Wilston</a></li>
+                            <li><a href=""><i class="fa fa-calendar"></i> 12-Dec-2018</a></li>
+                            <li><a href=""><i class="fa fa-clock-o"></i> 2:32 PM</a></li>
+                          </ul>
+                        </div>
+                        <a href="" class="hs_in_relpy">In reply to  Jack wilstone </a>
+                        <p>CurabiturCurabitur ullamcorper dictum risus sed elementum. Sed pretium in risus n  Morbi euismod.</p>
+                        <a href="" class="btn btn-default pull-right">Reply</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hs_sub_comment">
+              <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-2">
+                  <div class="hs_comment">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-2 col-sm-2"><img src="http://placehold.it/90X90" alt=""></div>
+                      <div class="col-lg-10 col-md-10 col-sm-10">
+                        <div class="hs_comment_date">
+                          <ul>
+                            <li><a href=""><i class="fa fa-user"></i> Jack Wilston</a></li>
+                            <li><a href=""><i class="fa fa-calendar"></i> 12-Dec-2018</a></li>
+                            <li><a href=""><i class="fa fa-clock-o"></i> 2:32 PM</a></li>
+                          </ul>
+                        </div>
+                        <a href="" class="hs_in_relpy">In reply to  Jack wilstone </a>
+                        <p>CurabiturCurabitur ullamcorper dictum risus sed elementum. Sed pretium in risus n  Morbi euismod.</p>
+                        <a href="" class="btn btn-success pull-right">Reply</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="hs_margin_30"></div>
+          <div class="hs_comment">
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2"><img src="http://placehold.it/90X90" alt=""></div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <div class="hs_comment_date">
+                  <ul>
+                    <li><a href=""><i class="fa fa-user"></i> Jack Wilston</a></li>
+                    <li><a href=""><i class="fa fa-calendar"></i> 12-Dec-2018</a></li>
+                    <li><a href=""><i class="fa fa-clock-o"></i> 2:32 PM</a></li>
+                  </ul>
+                </div>
+                <p>Curabitur ullamcorper dictum risus sed elementum. Sed pretium in risus non ollicitudin. Morbi euismod consecteturisque. Phasellus quis cursus ant sagittis pellentesque pulvinar. Maecenas pharetra.</p>
+                <a href="" class="btn btn-default pull-right">Reply</a> </div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="hs_margin_40"></div>
+        </div>
+    </div>
+    </div>
+  </div>
+  {%endblock content%}
